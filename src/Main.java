@@ -10,7 +10,10 @@ public class Main {
         rook.allowedMoves();
         //rook.printMoves();
         Knight knight = new Knight("White knight", new Coordinate('D', 4 ));
-        knight.allowedMoves();
-        knight.printMoves();
+        //knight.allowedMoves();
+        //knight.printMoves();
+        Queen qq = new Queen("white queen", new Coordinate('D',4));
+        qq.allowedMoves();
+        qq.printMoves();
     }
 }
