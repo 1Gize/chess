@@ -1,12 +1,18 @@
 public class Coordinate{
-    private String xCord;
+    private char xCord;
     private int yCord;
-    Coordinate(String x,int y){
+    Coordinate(char x,int y){
         xCord = x;
         yCord = y;
     }
     public String toString(){
-        String end =  xCord + yCord;
+        String end =  xCord + Integer.toString(yCord);
         return end;
+    }
+    public char getX(){
+        return xCord;
+    }
+    public int getY(){
+        return yCord;
     }
 }

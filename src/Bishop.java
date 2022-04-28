@@ -8,12 +8,30 @@ public class Bishop extends Piece{
 
     @Override
     public List<Coordinate> allowedMoves() {
-        List<Coordinate> aM = new ArrayList<>();
         boolean isThereMore = true;
+        for(int x= 1; x < 8; x++){
+            if(cor.getX() - x >= valueOfA && cor.getY() - x >= 1) {
+                allMoves.add(new Coordinate((char)(cor.getX()- x),cor.getY() - x ));
+            }
+            if(cor.getX() + x <= valueOfH && cor.getY() + x <= 8){
+                allMoves.add(new Coordinate((char)(cor.getX() + x),cor.getY() + x));
+            }
+            if(cor.getX() + x <= valueOfH && cor.getY() - x >= 1){
+                allMoves.add(new Coordinate((char)(cor.getX() + x),cor.getY() - x));
+            }
+            if(cor.getX() - x >= valueOfA && cor.getY() + x <= 8){
+                allMoves.add(new Coordinate((char)(cor.getX() - x),cor.getY() + x));
+            }else {
+
+            }
+
+        }
+
+
         while(isThereMore){
 
             isThereMore = false;
         }
-        return super.allowedMoves();
+        return allMoves;
     }
 }
