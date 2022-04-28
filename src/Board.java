@@ -82,6 +82,13 @@ public class Board {
            System.out.println();
        }
    }
+   public Field findField(Coordinate cor){
+       for(Field[] f : board){
+           for(Field field : f){
+           }
+       }
+       return null;
+   }
    public void addPiece(Piece piece){
 
    }
