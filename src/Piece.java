@@ -8,15 +8,19 @@ public abstract class Piece{
     }
     public final  int valueOfA = 65;
     public final int valueOfH = 72;
-    private String name;
+    public String name;
     public Coordinate cor;
     public List<Coordinate> allMoves = new ArrayList<>();
     public List<Coordinate> allowedMoves() {
         return null;
     }
     public void printMoves(){
+        System.out.print("All moves for " + this.name + " ");
+        for(Coordinate c : allMoves){
+            System.out.print(c.toString() + ", ");
+        }
     }
-    public void makeMove(){
-
+    public void changeCor(Coordinate c){
+        cor = c;
     }
 }

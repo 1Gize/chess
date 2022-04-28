@@ -21,16 +21,7 @@ public class Bishop extends Piece{
             }
             if(cor.getX() - x >= valueOfA && cor.getY() + x <= 8){
                 allMoves.add(new Coordinate((char)(cor.getX() - x),cor.getY() + x));
-            }else {
-
             }
-
-        }
-
-
-        while(isThereMore){
-
-            isThereMore = false;
         }
         return allMoves;
     }
