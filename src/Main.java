@@ -4,11 +4,13 @@ public class Main {
         Board b = new Board();
         b.printBoard();
         Bishop bp = new Bishop("Black bishop", new Coordinate('C', 3));
-        //System.out.println(Integer.valueOf("H"));
         //bp.allowedMoves();
         //bp.printMoves();
         Rook rook = new Rook("White rook", new Coordinate('C', 5));
         rook.allowedMoves();
-        rook.printMoves();
+        //rook.printMoves();
+        Knight knight = new Knight("White knight", new Coordinate('D', 4 ));
+        knight.allowedMoves();
+        knight.printMoves();
     }
 }
